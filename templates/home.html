@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Finance Manager</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="container">
+        <h1>Welcome to Finance Manager</h1>
+        <p>Manage your finances like a pro</p>
+        <a href="{{ url_for('register') }}" class="button-primary">Get Started</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+    <div class="container">
+        <div class="feature">
+            <i class="fa fa-money"></i>
+            <h2>Track Your Expenses</h2>
+            <p>Record all your expenses and keep track of where your money is going.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-piggy-bank"></i>
+            <h2>Save Money</h2>
+            <p>Create a budget and see how much you can save each month.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-line-chart"></i>
+            <h2>Invest Your Savings</h2>
+            <p>Grow your wealth by investing your savings in stocks and other assets.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="cta">
+    <div class="container">
+        <h2>Ready to take control of your finances?</h2>
+        <a href="{{ url_for('register') }}" class="button-primary">Get Started</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Finance Manager. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

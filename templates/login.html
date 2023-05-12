@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('home') }}">Home</a></li>
+				<li><a href="{{ url_for('register') }}">Register</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="hero">
+		<h1>Login</h1>
+	</div>
+
+	<main>
+		<div class="container">
+			{% if error %}
+			<p class="error-message">{{ error }}</p>
+			{% endif %}
+			<form class="login-form" method="POST" action="{{ url_for('login') }}">
+				<label>Username</label>
+				<input type="text" name="username" required>
+				<label>Password</label>
+				<input type="password" name="password" required>
+				<input class="button-primary" type="submit" value="Login">
+			</form>
+			<p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 MyWebsite.com</p>
+		</div>
+	</footer>
+</body>
+</html>

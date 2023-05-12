@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+	<div class="header">
+		<h1>Welcome to your dashboard, {{ session['username'] }}!</h1>
+		<p>Your monthly income is ${{ monthly_income }}.</p>
+	</div>
+
+	<div class="content">
+		<div class="category">
+			<div class="category-icon housing"></div>
+			<div class="category-text">
+				<p class="category-name">Housing Expenses</p>
+				<p class="category-amount">${{ housing_expenses }}</p>
+				<div class="progress-bar">
+					<div class="progress" style="width: {{ housing_expenses / monthly_income * 100 }}%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="category">
+			<div class="category-icon transportation"></div>
+			<div class="category-text">
+				<p class="category-name">Transportation Expenses</p>
+				<p class="category-amount">${{ transportation_expenses }}</p>
+				<div class="progress-bar">
+					<div class="progress" style="width: {{ transportation_expenses / monthly_income * 100 }}%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="category">
+			<div class="category-icon food"></div>
+			<div class="category-text">
+				<p class="category-name">Food Expenses</p>
+				<p class="category-amount">${{ food_expenses }}</p>
+				<div class="progress-bar">
+					<div class="progress" style="width: {{ food_expenses / monthly_income * 100 }}%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="category">
+			<div class="category-icon other"></div>
+			<div class="category-text">
+				<p class="category-name">Other Expenses</p>
+				<p class="category-amount">${{ other_expenses }}</p>
+				<div class="progress-bar">
+					<div class="progress" style="width: {{ other_expenses / monthly_income * 100 }}%"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="suggestions">
+			<h2>Suggestions</h2>
+			<ul>
+				<li>If you reduce your food expenses by 10%, you can save ${{ food_expenses * 0.1 }} per month.</li>
+				<li>Consider carpooling or taking public transportation to save money on transportation expenses.</li>
+				<li>Try negotiating a lower rent with your landlord to save money on housing expenses.</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="logout">
+		<form action="{{ url_for('logout') }}" method="GET">
+			<button type="submit" class="logout-button">Logout</button>
+		</form>
+	</div>
+</body>
+</html>

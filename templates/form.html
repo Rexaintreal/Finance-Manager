@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Financial Tracker - Form</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+  <form action="/dashboard" method="POST">
+    <h1>Financial Information</h1>
+
+    <div class="form-group">
+      <label for="monthly_income">Monthly Income:</label>
+      <input type="number" name="monthly_income" required>
+    </div>
+
+    <div class="form-group">
+      <label for="housing_expenses">Housing Expenses:</label>
+      <input type="number" name="housing_expenses" required>
+    </div>
+
+    <div class="form-group">
+      <label for="transportation_expenses">Transportation Expenses:</label>
+      <input type="number" name="transportation_expenses" required>
+    </div>
+
+    <div class="form-group">
+      <label for="food_expenses">Food Expenses:</label>
+      <input type="number" name="food_expenses" required>
+    </div>
+
+    <div class="form-group">
+      <label for="other_expenses">Other Expenses:</label>
+      <input type="number" name="other_expenses" required>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
