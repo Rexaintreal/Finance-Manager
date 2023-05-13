@@ -31,6 +31,10 @@ This project is a web application built with the Flask framework, designed to pr
 
 Finance Manager is a web application build with Flask, HTML and CSS, Using Flask in the backend helped alot as I already knew the basics of Python, We've used a simple and user-friendly design for the homepage as well as the dashboard the program just displays the financial data in the progress bar and shows some of the most common tips to save more money. 
 
+<p align="center">
+  <img src="https://github.com/Rexaintreal/Finance-Manager/blob/main/Images/Screenshot%20(66).png" alt="Homepage">
+</p>
+
 ## Getting Started
 
 To set up this project locally, please follow these steps:
